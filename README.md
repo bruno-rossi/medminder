@@ -1,8 +1,21 @@
-# Getting Started with Create React App
+# Medminder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Set up
+Set up react for client
+Set up Flask and DB
+Website has a top nav and footer which persist at the top and bottom of the page, respectively.
+Incorporate react router.
+Incorporate
 
-## Available Scripts
+## User auth
+
+As a new user, I can sign up for an account with email and an encrypted password.
+As an existing user, I can log into my existing account.
+Passwords should contain a minimum of 8 characters.
+Frontend validation of email and password.
+Backend validation of password.
+As a logged in user, my log in persists through refreshes.
+
 
 In the project directory, you can run:
 

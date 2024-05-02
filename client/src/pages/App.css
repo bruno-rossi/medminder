@@ -1,0 +1,87 @@
+:root {
+    --text-color1: black;
+    --text-color2: white;
+    --color1: #820263;
+    --color2: #D90368;
+    --color3: #EADEDA;
+    --color4: #2E294E;
+    --color5: #FFD400;
+    --font: "Teachers", sans-serif;;
+    --logo-font: "Pacifico", cursive;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: var(--font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.logo {
+    font-family: var(--logo-font);
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px 0;
+    border: 1px solid;
+}
+
+.navlink {
+    text-decoration: none;
+    color: var(--color1);
+    margin: 0 1em;
+    padding: 0.2em 1em;
+}
+
+.navbar-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 1em;
+    /* border: 1px solid; */
+}
+
+.navbar-li {
+    display: inline-block;
+    /* border: 1px solid; */
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+.primary {
+    color: var(--text-color2);
+    background-color: var(--color2);
+    font-weight: bold;
+    border: none;
+}
+
+.secondary {
+    color: var(--text-color1);
+}
+
+#footer {
+    border: 1px solid;
+    margin: 1em 0 0 0;
+}
