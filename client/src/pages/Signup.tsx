@@ -61,34 +61,36 @@ function Signup(): JSX.Element {
         <div className="main-section" id="signup">
             <form className="auth-form" onSubmit={handleSubmit}>
                 <h1>Welcome!</h1>
-                <p>Already have an account? <Link to="/login/">Log in</Link></p>
                 <fieldset>
-                    <label className="input-label" htmlFor="first-name-input">First name:</label>
-                    <input className="form-input" id="first-name-input" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First name"></input>
+                    {/* <legend>What's your name?</legend> */}
+                    <label className="input-label" htmlFor="first-name-input">First name</label>
+                    <input className="form-input" id="first-name-input" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First name" required></input>
 
-                    <label className="input-label" htmlFor="last-name-input">Last name:</label>
-                    <input className="form-input" id="last-name-input" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last name"></input>
+                    <label className="input-label" htmlFor="last-name-input">Last name</label>
+                    <input className="form-input" id="last-name-input" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last name" required></input>
                 </fieldset>
                 <fieldset>
                     <label className="input-label" htmlFor="email-input">Email:</label>
-                    <input className="form-input" id="email-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
+                    <input className="form-input" id="email-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required></input>
                     
                     <label className="input-label" htmlFor="password-input">Password:</label>
-                    <input className="form-input" id="password-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
+                    <input className="form-input" id="password-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required></input>
 
                     <label className="input-label" htmlFor="confirm-password-input">Confirm password:</label>
-                    <input className="form-input" id="confirm-password-input" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm password"></input>
+                    <input className="form-input" id="confirm-password-input" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm password" required></input>
                 </fieldset>
-                <fieldset>
+                {/* <fieldset>
                     <legend>Settings</legend>
                     <label className="input-label" htmlFor="language-input">Language:</label>
                     <input className="form-input" id="language-input" value={window.navigator.language}></input>
                     <label className="input-label" htmlFor="timezone-input">Timezone:</label>
                     <input className="form-input" id="timezone-input"></input>
+                </fieldset> */}
+                <fieldset>
+                        <label><input type="checkbox" /><span className="legal-disclaimer">By clicking Submit, you agree to our Terms and Conditions and Privacy Policy.</span></label>
                 </fieldset>
-                
                 <button className="primary" type="submit">Create account</button>
-                <p className="legal-disclaimer">By clicking Submit, you agree to our Terms and Conditions and Privacy Policy.</p>
+                <p>Already have an account? <Link to="/login/">Log in</Link></p>
             </form>
         </div>
     )
