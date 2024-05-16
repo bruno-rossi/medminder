@@ -45,11 +45,15 @@ function Login(): JSX.Element {
     
     return (
         <div id="login">
-            <h1>Log in</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
-                <button type="submit">Submit</button>
+            <form className="auth-form" onSubmit={handleSubmit}>
+                <h1>Log in</h1>
+                <fieldset>
+                    <label className="input-label" htmlFor="email-input">Email:</label>
+                    <input className="form-input" id="email-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
+                    <label className="input-label" htmlFor="password-input">Password:</label>
+                    <input className="form-input" id="password-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
+                </fieldset>
+                <button className="primary" type="submit">Log in</button>
             </form>
         </div>
     )

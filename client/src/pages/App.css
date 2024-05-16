@@ -75,7 +75,6 @@ body {
     /* border: 1px solid; */
     margin: 0 0.5em;
     padding: 0.5em 1em;
-    border-radius: 1em;
 }
 
 .primary {
@@ -88,6 +87,48 @@ body {
 .secondary {
     color: var(--text-color1);
 }
+
+/* Login and Signup forms */
+.main-section {
+    border: 1px solid black;
+}
+
+.auth-form {
+    margin: 0 auto;
+    padding: 0 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.auth-form fieldset {
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+.input-label {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+}
+
+.form-input {
+    font-family: var(--font);
+    display: block;
+    width: 100%;
+    margin: 0 auto 2em auto;
+    height: 2em;
+}
+
+.auth-form button {
+    font-family: var(--font);
+    display: inline-block;
+    width: 90%;
+    margin: 0 auto 2em auto;
+    /* border: 1px solid black; */
+}
+
 
 #footer {
     border: 1px solid;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, NavigateFunction } from "react-router-dom";
+import { Link, useNavigate, NavigateFunction } from "react-router-dom";
 
 interface SignupData {
     email: string;
@@ -9,6 +9,8 @@ interface SignupData {
 }
 
 function Signup(): JSX.Element {
+
+    console.log(window.navigator.language);
 
     const [ email, setEmail ] = useState<string>("");
     const [ firstName, setFirstName ] = useState<string>("");
@@ -56,16 +58,37 @@ function Signup(): JSX.Element {
     }
 
     return (
-        <div id="signup">
-            <h1>Sign up</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
-                <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First name"></input>
-                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last name"></input>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
-                <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm password"></input>
+        <div className="main-section" id="signup">
+            <form className="auth-form" onSubmit={handleSubmit}>
+                <h1>Welcome!</h1>
+                <p>Already have an account? <Link to="/login/">Log in</Link></p>
+                <fieldset>
+                    <label className="input-label" htmlFor="first-name-input">First name:</label>
+                    <input className="form-input" id="first-name-input" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First name"></input>
+
+                    <label className="input-label" htmlFor="last-name-input">Last name:</label>
+                    <input className="form-input" id="last-name-input" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last name"></input>
+                </fieldset>
+                <fieldset>
+                    <label className="input-label" htmlFor="email-input">Email:</label>
+                    <input className="form-input" id="email-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
+                    
+                    <label className="input-label" htmlFor="password-input">Password:</label>
+                    <input className="form-input" id="password-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
+
+                    <label className="input-label" htmlFor="confirm-password-input">Confirm password:</label>
+                    <input className="form-input" id="confirm-password-input" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm password"></input>
+                </fieldset>
+                <fieldset>
+                    <legend>Settings</legend>
+                    <label className="input-label" htmlFor="language-input">Language:</label>
+                    <input className="form-input" id="language-input" value={window.navigator.language}></input>
+                    <label className="input-label" htmlFor="timezone-input">Timezone:</label>
+                    <input className="form-input" id="timezone-input"></input>
+                </fieldset>
                 
-                <button type="submit">Submit</button>
+                <button className="primary" type="submit">Create account</button>
+                <p className="legal-disclaimer">By clicking Submit, you agree to our Terms and Conditions and Privacy Policy.</p>
             </form>
         </div>
     )
