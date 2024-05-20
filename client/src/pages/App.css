@@ -6,6 +6,7 @@
     --color3: #EADEDA;
     --color4: #2E294E;
     --color5: #FFD400;
+    --color6: #3AB795;
     --font: "Teachers", sans-serif;;
     --logo-font: "Pacifico", cursive;
 }
@@ -75,7 +76,6 @@ body {
     /* border: 1px solid; */
     margin: 0 0.5em;
     padding: 0.5em 1em;
-    border-radius: 1em;
 }
 
 .primary {
@@ -88,6 +88,69 @@ body {
 .secondary {
     color: var(--text-color1);
 }
+
+/* Login and Signup forms */
+.main-section {
+    border: 1px solid black;
+}
+
+.auth-form {
+    margin: 0 auto;
+    padding: 0 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.auth-form fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.input-label {
+    display: none;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+.auth-form input[type=text], .auth-form input[type=password], .auth-form input[type=email] {
+    font-family: var(--font);
+    font-size: 1em;
+    display: block;
+    width: 80%;
+    margin: 1em auto 1em auto;
+    padding: 0 0.8em;
+    /* border-radius: 0.5em; */
+    border: 1px solid var(--color3);
+    height: 3em;
+}
+
+.password-match {
+    border-color: var(--color6);
+}
+
+.auth-form input[type=checkbox] {
+    margin: auto 1em;
+    vertical-align: middle;
+}
+
+.legal-disclaimer {
+    vertical-align: middle;
+}
+
+.auth-form button {
+    font-family: var(--font);
+    font-size: 1em;
+    display: inline-block;
+    width: 40%;
+    height: 3em;
+    margin: 1em auto 2em auto;
+    /* border: 1px solid black; */
+}
+
 
 #footer {
     border: 1px solid;
